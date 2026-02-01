@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Consultation Questionnaire</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: white;
+        }
+
+        .page {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+        }
+
+        @media print {
+            .page {
+                padding: 0;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+
+        h1 {
+            font-size: 24pt;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #111;
+        }
+
+        .subtitle {
+            font-size: 12pt;
+            color: #666;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #111;
+        }
+
+        h2 {
+            font-size: 14pt;
+            font-weight: 600;
+            margin-top: 28px;
+            margin-bottom: 16px;
+            color: #111;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 .number {
+            background: #111;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11pt;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f5f5f5;
+            font-weight: 600;
+            font-size: 10pt;
+        }
+
+        td {
+            min-height: 40px;
+        }
+
+        .input-line {
+            border-bottom: 1px solid #ccc;
+            min-height: 28px;
+            margin-bottom: 12px;
+        }
+
+        .field-group {
+            margin-bottom: 16px;
+        }
+
+        .field-label {
+            font-weight: 600;
+            font-size: 10pt;
+            margin-bottom: 4px;
+            color: #333;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 12px 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox {
+            width: 16px;
+            height: 16px;
+            border: 1.5px solid #333;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .notes-box {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 12px;
+            min-height: 80px;
+            background: #fafafa;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .tip {
+            background: #f0f7ff;
+            border-left: 4px solid #0066cc;
+            padding: 12px 16px;
+            margin: 20px 0;
+            font-size: 10pt;
+        }
+
+        .tip strong {
+            color: #0066cc;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 16px;
+            border-top: 1px solid #ddd;
+            font-size: 9pt;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .large-input {
+            min-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>Website Consultation Questionnaire</h1>
+        <p class="subtitle">Client Discovery Meeting — All fields to finalize project scope</p>
+
+        <!-- Section 1 -->
+        <h2><span class="number">1</span> Company Information</h2>
+        <table>
+            <tr>
+                <th style="width: 40%;">Question</th>
+                <th>Answer</th>
+            </tr>
+            <tr>
+                <td>Official company name (incl. legal form)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Desired domain (if already owned)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Year founded</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Location(s)</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <!-- Section 2 -->
+        <h2><span class="number">2</span> Contact Details (for website)</h2>
+        <div class="two-column">
+            <div class="field-group">
+                <div class="field-label">Phone</div>
+                <div class="input-line"></div>
+            </div>
+            <div class="field-group">
+                <div class="field-label">Email</div>
+                <div class="input-line"></div>
+            </div>
+            <div class="field-group">
+                <div class="field-label">Address</div>
+                <div class="input-line"></div>
+            </div>
+            <div class="field-group">
+                <div class="field-label">Business Hours</div>
+                <div class="input-line"></div>
+            </div>
+            <div class="field-group">
+                <div class="field-label">LinkedIn Profile</div>
+                <div class="input-line"></div>
+            </div>
+            <div class="field-group">
+                <div class="field-label">Other Social Media</div>
+                <div class="input-line"></div>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <h2><span class="number">3</span> Positioning & Brand</h2>
+
+        <div class="field-group">
+            <div class="field-label">What makes you different from competitors?</div>
+            <div class="notes-box"></div>
+        </div>
+
+        <div class="field-group">
+            <div class="field-label">Who is your ideal customer? (industry, size, region)</div>
+            <div class="notes-box"></div>
+        </div>
+
+        <div class="field-group">
+            <div class="field-label">Which 3 words should visitors associate with your brand?</div>
+            <div class="two-column" style="grid-template-columns: 1fr 1fr 1fr;">
+                <div class="input-line"></div>
+                <div class="input-line"></div>
+                <div class="input-line"></div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Section 4 -->
+        <h2><span class="number">4</span> Services</h2>
+        <p style="margin-bottom: 12px; color: #666; font-size: 10pt;">List each service you want displayed on the website:</p>
+        <table>
+            <tr>
+                <th style="width: 25%;">Service Name</th>
+                <th style="width: 45%;">Short Description (1-2 sentences)</th>
+                <th style="width: 30%;">Target Audience</th>
+            </tr>
+            <tr>
+                <td style="height: 50px;"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="height: 50px;"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="height: 50px;"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="height: 50px;"></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <!-- Section 5 -->
+        <h2><span class="number">5</span> References & Success Stories</h2>
+        <p style="margin-bottom: 12px; color: #666; font-size: 10pt;">Provide 3-4 specific projects we can showcase:</p>
+        <table>
+            <tr>
+                <th>Client / Industry</th>
+                <th>What was done?</th>
+                <th>Result (numbers if possible)</th>
+                <th style="width: 15%;">Can be named?</th>
+            </tr>
+            <tr>
+                <td style="height: 45px;"></td>
+                <td></td>
+                <td></td>
+                <td>☐ Yes &nbsp; ☐ Anonymous</td>
+            </tr>
+            <tr>
+                <td style="height: 45px;"></td>
+                <td></td>
+                <td></td>
+                <td>☐ Yes &nbsp; ☐ Anonymous</td>
+            </tr>
+            <tr>
+                <td style="height: 45px;"></td>
+                <td></td>
+                <td></td>
+                <td>☐ Yes &nbsp; ☐ Anonymous</td>
+            </tr>
+            <tr>
+                <td style="height: 45px;"></td>
+                <td></td>
+                <td></td>
+                <td>☐ Yes &nbsp; ☐ Anonymous</td>
+            </tr>
+        </table>
+
+        <div class="page-break"></div>
+
+        <!-- Section 6 -->
+        <h2><span class="number">6</span> Team Members</h2>
+        <p style="margin-bottom: 12px; color: #666; font-size: 10pt;">Who should appear on the website?</p>
+        <table>
+            <tr>
+                <th style="width: 25%;">Name & Title</th>
+                <th style="width: 20%;">Role</th>
+                <th style="width: 40%;">Short Bio (1-2 sentences)</th>
+                <th style="width: 15%;">Photo ready?</th>
+            </tr>
+            <tr>
+                <td style="height: 50px;"></td>
+                <td></td>
+                <td></td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+            </tr>
+            <tr>
+                <td style="height: 50px;"></td>
+                <td></td>
+                <td></td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+            </tr>
+            <tr>
+                <td style="height: 50px;"></td>
+                <td></td>
+                <td></td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+            </tr>
+        </table>
+
+        <!-- Section 7 -->
+        <h2><span class="number">7</span> Existing Assets</h2>
+        <p style="margin-bottom: 12px; color: #666; font-size: 10pt;">What materials do you already have?</p>
+        <div class="checkbox-group">
+            <div class="checkbox-item"><span class="checkbox"></span> Logo (SVG/PNG)</div>
+            <div class="checkbox-item"><span class="checkbox"></span> Brand guidelines / CI manual</div>
+            <div class="checkbox-item"><span class="checkbox"></span> Professional team photos</div>
+            <div class="checkbox-item"><span class="checkbox"></span> Office / workspace photos</div>
+            <div class="checkbox-item"><span class="checkbox"></span> Existing website copy</div>
+            <div class="checkbox-item"><span class="checkbox"></span> Brochures / marketing materials</div>
+            <div class="checkbox-item"><span class="checkbox"></span> Customer testimonials</div>
+            <div class="checkbox-item"><span class="checkbox"></span> Video content</div>
+        </div>
+
+        <div class="field-group" style="margin-top: 16px;">
+            <div class="field-label">Color preferences (if any)</div>
+            <div class="input-line"></div>
+        </div>
+
+        <!-- Section 8 -->
+        <h2><span class="number">8</span> Features & Functionality</h2>
+        <table>
+            <tr>
+                <th style="width: 40%;">Feature</th>
+                <th style="width: 15%;">Needed?</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Contact form</td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Newsletter signup</td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Blog / News section</td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Client login area</td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Multi-language (EN/DE)</td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Online appointment booking</td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Live chat</td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Other: </td>
+                <td>☐ Yes &nbsp; ☐ No</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="page-break"></div>
+
+        <!-- Section 9 -->
+        <h2><span class="number">9</span> Technical Requirements</h2>
+        <table>
+            <tr>
+                <th style="width: 40%;">Item</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Hosting</td>
+                <td>☐ Client provides &nbsp; ☐ I will set up &nbsp; ☐ Need recommendation</td>
+            </tr>
+            <tr>
+                <td>Domain</td>
+                <td>☐ Already owned &nbsp; ☐ Need to register</td>
+            </tr>
+            <tr>
+                <td>Contact form emails go to:</td>
+                <td style="height: 40px;"></td>
+            </tr>
+            <tr>
+                <td>Analytics preference</td>
+                <td>☐ Google Analytics &nbsp; ☐ Privacy-focused alternative &nbsp; ☐ None</td>
+            </tr>
+            <tr>
+                <td>Content Management System</td>
+                <td>☐ Static (I update) &nbsp; ☐ CMS needed (client updates)</td>
+            </tr>
+        </table>
+
+        <!-- Section 10 -->
+        <h2><span class="number">10</span> Legal Requirements</h2>
+        <div class="checkbox-group">
+            <div class="checkbox-item"><span class="checkbox"></span> Privacy policy exists</div>
+            <div class="checkbox-item"><span class="checkbox"></span> Legal notice / imprint info ready</div>
+            <div class="checkbox-item"><span class="checkbox"></span> GDPR compliance review needed</div>
+            <div class="checkbox-item"><span class="checkbox"></span> Cookie consent banner needed</div>
+        </div>
+
+        <div class="field-group" style="margin-top: 16px;">
+            <div class="field-label">Company registration details (VAT ID, registration number, authority)</div>
+            <div class="notes-box" style="min-height: 50px;"></div>
+        </div>
+
+        <!-- Section 11 -->
+        <h2><span class="number">11</span> Timeline & Budget</h2>
+        <div class="two-column">
+            <div class="field-group">
+                <div class="field-label">Desired launch date</div>
+                <div class="input-line"></div>
+            </div>
+            <div class="field-group">
+                <div class="field-label">Budget range</div>
+                <div class="input-line"></div>
+            </div>
+            <div class="field-group">
+                <div class="field-label">Who gives feedback?</div>
+                <div class="input-line"></div>
+            </div>
+            <div class="field-group">
+                <div class="field-label">Who gives final approval?</div>
+                <div class="input-line"></div>
+            </div>
+        </div>
+
+        <!-- Section 12 -->
+        <h2><span class="number">12</span> Inspiration & Preferences</h2>
+
+        <div class="field-group">
+            <div class="field-label">Websites you like (competitors or other industries)</div>
+            <div class="notes-box"></div>
+        </div>
+
+        <div class="field-group">
+            <div class="field-label">What do you NOT want? (styles, features, elements to avoid)</div>
+            <div class="notes-box"></div>
+        </div>
+
+        <div class="tip">
+            <strong>Tip:</strong> The most important information often comes up in casual conversation. Ask for specific numbers (funding amounts, success rates) — they make the website credible.
+        </div>
+
+        <div class="field-group">
+            <div class="field-label">Additional notes</div>
+            <div class="notes-box" style="min-height: 100px;"></div>
+        </div>
+
+        <div class="footer">
+            <span>Client: ________________________________</span>
+            <span>Date: ________________________________</span>
+        </div>
+    </div>
+</body>
+</html>
